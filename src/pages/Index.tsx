@@ -511,7 +511,7 @@ const Index = () => {
             <div className="animate-on-scroll">
               <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 28 }}>
                 {[
-                  { icon: "Phone", bg: "#e0f2fe", c: "#0ea5e9", label: "Звоните бесплатно", value: "+7 (800) 555-00-00", sub: "Пн–Сб с 9:00 до 20:00" },
+                  { icon: "Phone", bg: "#e0f2fe", c: "#0ea5e9", label: "Звоните бесплатно", value: "+7 (912) 518-92-07", sub: "Пн–Сб с 9:00 до 20:00" },
                   { icon: "Mail", bg: "#f5f3ff", c: "#a855f7", label: "Пишите на почту", value: "info@elegance-windows.ru", sub: "Ответим в течение часа" },
                   { icon: "MapPin", bg: "#fff7ed", c: "#f97316", label: "Приезжайте в офис", value: "г. Москва, ул. Примерная, 12", sub: "Рядом с метро Сокольники" },
                 ].map((c) => (
