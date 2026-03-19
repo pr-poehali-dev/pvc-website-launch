@@ -4,34 +4,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 45 30% 92%;
-    --card: 0 0% 8%;
-    --card-foreground: 45 30% 92%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 45 30% 92%;
-    --primary: 43 65% 54%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 45 30% 85%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 55%;
-    --accent: 43 65% 54%;
-    --accent-foreground: 0 0% 5%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 43 30% 18%;
-    --input: 0 0% 14%;
-    --ring: 43 65% 54%;
-    --radius: 0.25rem;
-    --sidebar-background: 0 0% 6%;
-    --sidebar-foreground: 45 30% 85%;
-    --sidebar-primary: 43 65% 54%;
-    --sidebar-primary-foreground: 0 0% 5%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 45 30% 85%;
-    --sidebar-border: 43 30% 18%;
-    --sidebar-ring: 43 65% 54%;
+    --background: 0 0% 99%;
+    --foreground: 220 15% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+    --primary: 204 80% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 15% 35%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 28 90% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 90%;
+    --input: 220 15% 94%;
+    --ring: 204 80% 42%;
+    --radius: 0.75rem;
   }
 
   * {
@@ -45,15 +37,15 @@
   }
 
   body {
-    background-color: #0a0a0a;
-    color: #f0e8d0;
-    font-family: "Montserrat", sans-serif;
+    background-color: #fafbfc;
+    color: #1e2532;
+    font-family: "Golos Text", "Montserrat", sans-serif;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: #c9a84c33;
-    color: #f0d080;
+    background: #bde3f8;
+    color: #1a6fa0;
   }
 
   ::-webkit-scrollbar {
@@ -61,123 +53,130 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #111;
+    background: #f0f4f8;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #c9a84c55;
+    background: #c5d4e0;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #c9a84c;
+    background: #5ba4cf;
   }
 }
 
 @layer components {
-  .gold-text {
-    background: linear-gradient(135deg, #f0d080 0%, #c9a84c 40%, #e8c060 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Основная кнопка */
+  .btn-primary {
+    background: #2a8fd4;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+    padding: 14px 32px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 20px rgba(42, 143, 212, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  .gold-btn {
-    background: linear-gradient(135deg, #c9a84c, #a07830);
-    color: #0a0a0a;
+  .btn-primary:hover {
+    background: #1e7bbf;
+    box-shadow: 0 6px 28px rgba(42, 143, 212, 0.4);
+    transform: translateY(-2px);
+  }
+
+  /* Вторичная кнопка */
+  .btn-outline {
+    background: transparent;
+    color: #2a8fd4;
     font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
+    padding: 13px 32px;
+    border-radius: 10px;
+    border: 1.5px solid #2a8fd4;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-outline:hover {
+    background: #f0f8ff;
+    border-color: #1e7bbf;
+    transform: translateY(-2px);
+  }
+
+  /* Акцентная кнопка оранжевая */
+  .btn-accent {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 15px 36px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 24px rgba(249, 115, 22, 0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-accent:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(249, 115, 22, 0.45);
+  }
+
+  /* Карточка */
+  .site-card {
+    background: #ffffff;
+    border: 1px solid #e8eef4;
+    border-radius: 16px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
   }
 
-  .gold-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #f0d080, #c9a84c);
-    transition: left 0.3s ease;
-    z-index: 0;
-  }
-
-  .gold-btn:hover::before {
-    left: 0;
-  }
-
-  .gold-btn > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .section-title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    line-height: 1.15;
-  }
-
-  .luxury-card {
-    background: linear-gradient(145deg, #1a1a1a, #111111);
-    border: 1px solid #c9a84c22;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .luxury-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #c9a84c, transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .luxury-card:hover::before {
-    opacity: 1;
-  }
-
-  .luxury-card:hover {
-    border-color: #c9a84c55;
+  .site-card:hover {
+    border-color: #bbd8f0;
+    box-shadow: 0 12px 48px rgba(42, 143, 212, 0.1);
     transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(201, 168, 76, 0.12);
   }
 
+  /* Навигация */
   .nav-link {
     position: relative;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    color: #9a8860;
-    transition: color 0.3s ease;
+    color: #5a6b7e;
+    transition: color 0.2s ease;
     text-decoration: none;
+    padding: 4px 0;
   }
 
   .nav-link::after {
     content: "";
     position: absolute;
-    bottom: -3px;
+    bottom: -2px;
     left: 0;
     width: 0;
-    height: 1px;
-    background: #c9a84c;
-    transition: width 0.3s ease;
+    height: 2px;
+    background: #2a8fd4;
+    border-radius: 1px;
+    transition: width 0.25s ease;
   }
 
-  .nav-link:hover {
-    color: #c9a84c;
+  .nav-link:hover,
+  .nav-link.active {
+    color: #1a6fa0;
   }
 
   .nav-link:hover::after,
@@ -185,22 +184,64 @@
     width: 100%;
   }
 
-  .nav-link.active {
-    color: #c9a84c;
+  /* Заголовок секции */
+  .section-title {
+    font-family: "Golos Text", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: #1e2532;
   }
 
-  .divider-gold {
+  .section-subtitle {
+    font-size: 1rem;
+    color: #6b7c93;
+    line-height: 1.7;
+    margin-top: 12px;
+  }
+
+  /* Тег / бейдж */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .tag-blue {
+    background: #e0f0fb;
+    color: #1a6fa0;
+  }
+
+  .tag-orange {
+    background: #fff0e6;
+    color: #c2440e;
+  }
+
+  .tag-green {
+    background: #e6f7f0;
+    color: #1a7a50;
+  }
+
+  /* Разделитель */
+  .section-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #c9a84c55, transparent);
+    background: linear-gradient(90deg, transparent, #dde6f0, transparent);
     width: 100%;
   }
 
+  /* Анимация при скролле */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
     transition:
-      opacity 0.8s ease,
-      transform 0.8s ease;
+      opacity 0.7s ease,
+      transform 0.7s ease;
   }
 
   .animate-on-scroll.visible {
@@ -208,21 +249,107 @@
     transform: translateY(0);
   }
 
-  .hero-grain::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    opacity: 0.3;
+  /* Иконка в кружке */
+  .icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .icon-circle-blue {
+    background: #e0f2fe;
+    color: #0ea5e9;
+  }
+
+  .icon-circle-orange {
+    background: #fff7ed;
+    color: #f97316;
+  }
+
+  .icon-circle-green {
+    background: #f0fdf4;
+    color: #22c55e;
+  }
+
+  /* Форма инпут */
+  .form-input {
+    width: 100%;
+    background: #f5f8fb;
+    border: 1.5px solid #e0e8f0;
+    border-radius: 10px;
+    padding: 13px 16px;
+    font-size: 0.95rem;
+    color: #1e2532;
+    font-family: inherit;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+    outline: none;
+  }
+
+  .form-input:focus {
+    border-color: #2a8fd4;
+    box-shadow: 0 0 0 3px rgba(42, 143, 212, 0.12);
+    background: #ffffff;
+  }
+
+  .form-input::placeholder {
+    color: #a0b0c0;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  /* Статистика */
+  .stat-card {
+    text-align: center;
+    padding: 24px 16px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2a8fd4;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: #7a8ea0;
+    margin-top: 6px;
+    font-weight: 500;
   }
 }
 
-@keyframes gold-shimmer {
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-ring {
   0% {
-    background-position: 0% center;
+    box-shadow: 0 0 0 0 rgba(42, 143, 212, 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(42, 143, 212, 0);
   }
   100% {
-    background-position: 200% center;
+    box-shadow: 0 0 0 0 rgba(42, 143, 212, 0);
   }
 }
