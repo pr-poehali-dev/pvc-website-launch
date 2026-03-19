@@ -9,7 +9,6 @@ const NAV_ITEMS = [
   { id: "home", label: "Главная" },
   { id: "catalog", label: "Каталог" },
   { id: "services", label: "Услуги" },
-  { id: "portfolio", label: "Портфолио" },
   { id: "about", label: "О нас" },
   { id: "guarantee", label: "Гарантия" },
   { id: "contacts", label: "Контакты" },
@@ -313,49 +312,6 @@ const Index = () => {
                 </div>
                 <h3 style={{ fontWeight: 700, fontSize: "1rem", color: "#1e2532", marginBottom: 8 }}>{s.title}</h3>
                 <p style={{ color: "#6b7c93", fontSize: "0.875rem", lineHeight: 1.65 }}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* PORTFOLIO */}
-      <section id="portfolio" style={{ padding: "96px 24px", backgroundColor: "#fafbfc" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div className="animate-on-scroll" style={{ textAlign: "center", marginBottom: 56 }}>
-            <span className="tag tag-green" style={{ marginBottom: 16, display: "inline-flex" }}>
-              <Icon name="Image" size={13} />
-              Наши работы
-            </span>
-            <h2 className="section-title">Реализованные проекты</h2>
-            <p className="section-subtitle" style={{ maxWidth: 440, margin: "12px auto 0" }}>
-              Более 1200 довольных клиентов по всему региону
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
-            {[
-              { img: WINDOW_IMG, label: "ЖК «Прима»", tag: "96 окон", wide: true },
-              { img: BALCONY_IMG, label: "Коттедж на Рублёвке", tag: "Балконы под ключ" },
-              { img: DOOR_IMG, label: "БЦ «Меридиан»", tag: "Входные группы" },
-              { img: BALCONY_IMG, label: "ЖК «Небо»", tag: "240 квартир", wide: true },
-              { img: WINDOW_IMG, label: "Апартаменты «Сити»", tag: "Панорамное остекление" },
-            ].map((p, i) => (
-              <div key={i} className="animate-on-scroll" style={{
-                position: "relative", overflow: "hidden", cursor: "pointer",
-                height: 220, borderRadius: 14, transitionDelay: `${i * 0.1}s`,
-                gridColumn: p.wide ? "span 2" : "span 1",
-              }}>
-                <img src={p.img} alt={p.label} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.6s" }} className="hover:scale-110" />
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(20,32,50,0.75) 0%, transparent 55%)" }} />
-                <div style={{ position: "absolute", bottom: 16, left: 16 }}>
-                  <span style={{ background: "rgba(42,143,212,0.9)", color: "#fff", fontSize: "0.68rem", fontWeight: 700, padding: "3px 10px", borderRadius: 100, marginBottom: 6, display: "inline-block" }}>
-                    {p.tag}
-                  </span>
-                  <div style={{ fontWeight: 700, fontSize: "1rem", color: "#fff" }}>{p.label}</div>
-                </div>
               </div>
             ))}
           </div>
