@@ -513,7 +513,7 @@ const Index = () => {
                 {[
                   { icon: "Phone", bg: "#e0f2fe", c: "#0ea5e9", label: "Звоните бесплатно", value: "+7 (912) 518-92-07", sub: "Пн–Сб с 9:00 до 20:00" },
                   { icon: "Mail", bg: "#f5f3ff", c: "#a855f7", label: "Пишите на почту", value: "Aleksandrbogovid@mail.ru", sub: "Ответим в течение часа" },
-                  { icon: "MapPin", bg: "#fff7ed", c: "#f97316", label: "Приезжайте в офис", value: "г. Москва, ул. Примерная, 12", sub: "Рядом с метро Сокольники" },
+                  { icon: "MapPin", bg: "#fff7ed", c: "#f97316", label: "Приезжайте в офис", value: "ул. Магистральная, 63, корп. 7, рынок «Пятёрочка»", sub: "Рядом с метро Сокольники" },
                 ].map((c) => (
                   <div key={c.label} style={{ background: "#fff", borderRadius: 14, padding: 20, border: "1px solid #e8eef4", display: "flex", alignItems: "center", gap: 16 }}>
                     <div style={{ width: 48, height: 48, borderRadius: 12, background: c.bg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
