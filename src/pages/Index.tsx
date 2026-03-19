@@ -80,7 +80,7 @@ const Index = () => {
               <Icon name="Grid2x2" size={18} style={{ color: "#fff" }} />
             </div>
             <div>
-              <div style={{ fontWeight: 800, fontSize: "1.1rem", color: "#1e2532", letterSpacing: "-0.02em", lineHeight: 1 }}>Элеганс</div>
+              <div style={{ fontWeight: 800, fontSize: "1.1rem", color: "#1e2532", letterSpacing: "-0.02em", lineHeight: 1 }}>Салон окон и дверей УЮТ</div>
               <div style={{ fontSize: "0.62rem", color: "#8aa0b8", letterSpacing: "0.06em", textTransform: "uppercase", lineHeight: 1, marginTop: 2 }}>Окна · Двери · Балконы</div>
             </div>
           </div>
@@ -564,7 +564,7 @@ const Index = () => {
             <div style={{ width: 34, height: 34, borderRadius: 8, background: "linear-gradient(135deg, #2a8fd4, #1a6fa0)", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Icon name="Grid2x2" size={16} style={{ color: "#fff" }} />
             </div>
-            <span style={{ fontWeight: 700, fontSize: "1rem", color: "#fff" }}>Элеганс</span>
+            <span style={{ fontWeight: 700, fontSize: "1rem", color: "#fff" }}>Салон окон и дверей УЮТ</span>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center" }}>
             {NAV_ITEMS.map((n) => (
@@ -577,7 +577,7 @@ const Index = () => {
               </button>
             ))}
           </div>
-          <div style={{ color: "#4a5568", fontSize: "0.75rem" }}>© 2024 Элеганс. Все права защищены</div>
+          <div style={{ color: "#4a5568", fontSize: "0.75rem" }}>© 2024 Салон окон и дверей УЮТ. Все права защищены</div>
         </div>
       </footer>
 
