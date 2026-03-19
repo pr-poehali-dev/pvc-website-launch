@@ -81,7 +81,7 @@ const Index = () => {
             </div>
             <div>
               <div style={{ fontWeight: 800, fontSize: "1.1rem", color: "#1e2532", letterSpacing: "-0.02em", lineHeight: 1 }}>Салон окон и дверей УЮТ</div>
-              <div style={{ fontSize: "0.62rem", color: "#8aa0b8", letterSpacing: "0.06em", textTransform: "uppercase", lineHeight: 1, marginTop: 2 }}>Окна · Двери · Балконы</div>
+              <div style={{ fontSize: "0.8rem", color: "#2a8fd4", letterSpacing: "0.04em", textTransform: "uppercase", lineHeight: 1, marginTop: 4, fontWeight: 700 }}>Окна · Двери · Балконы</div>
             </div>
           </div>
 
